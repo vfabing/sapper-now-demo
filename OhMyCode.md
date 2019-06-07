@@ -1,4 +1,5 @@
 # Start coding on Sapper
+https://sapper.svelte.dev/
 
 `npx degit "sveltejs/sapper-template#webpack" sapper-demo`
 
@@ -9,6 +10,7 @@
 `npm run dev`
 
 # Start deploying on Now.sh
+https://sapper.svelte.dev/docs#Deploying_to_Now
 
 ## Add file `now.json` with content:
 ```json
