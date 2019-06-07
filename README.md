@@ -32,15 +32,34 @@ https://sapper.svelte.dev/docs#Deploying_to_Now
 ```
 
 ## Build & Deploy
-`npm run build & now`
+`npm run build`
+
+`now`
 
 # Annexes
 
 ## Fix webpack.config.js
 
-`external: Object.keys(pkg.dependencies).concat(` to `external: [].concat(`
+[CHANGE] `external: Object.keys(pkg.dependencies).concat(` to `external: [].concat(`
 
 ## Fix server.js (Expose polka handler)
+[CHANGE] 
 `polka()` to `const app = polka()` 
 
-`export default app.handler`
+[REMOVE]
+```javascript
+	.listen(PORT, err => {
+		if (err) console.log('error', err);
+	});
+```
+
+[ADD] `export default app.handler`
+
+[ADD]
+```javascript
+if (!process.env.NOW_REGION) {
+	app.listen(PORT, err => {
+		if (err) console.log('error', err)
+	})
+} 
+```
