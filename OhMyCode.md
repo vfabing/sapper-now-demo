@@ -10,9 +10,7 @@
 
 # Start deploying on Now.sh
 
-`npm i now-sapper`
-
-Add file `now.json` with content:
+## Add file `now.json` with content:
 ```json
 {
     "version": 2,
@@ -28,6 +26,18 @@ Add file `now.json` with content:
   }
 ```
 
+## Build & Deploy
 `npm run build`
 
 `now`
+
+# Annexes
+
+## Fix webpack.config.js
+
+`external: Object.keys(pkg.dependencies).concat(` to `external: [].concat(`
+
+## Fix server.js (Expose polka handler)
+`polka()` to `const app = polka()` 
+
+`export default app.handler`
