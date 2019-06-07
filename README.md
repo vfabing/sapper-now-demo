@@ -1,4 +1,4 @@
-# Start coding on Sapper
+# Start coding on Sapper [DEPRECATED. Please have a look to [sapper-now-template](https://github.com/vfabing/sapper-now-template)]
 https://sapper.svelte.dev/
 
 `npx degit "sveltejs/sapper-template#webpack" sapper-demo`
