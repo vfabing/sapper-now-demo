@@ -27,9 +27,7 @@
 ```
 
 ## Build & Deploy
-`npm run build`
-
-`now`
+`npm run build & now`
 
 # Annexes
 
