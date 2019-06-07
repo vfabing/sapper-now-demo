@@ -12,6 +12,9 @@ https://sapper.svelte.dev/
 # Start deploying on Now.sh
 https://sapper.svelte.dev/docs#Deploying_to_Now
 
+## Install Now CLI
+`npm install -g now`
+
 ## Add file `now.json` with content:
 ```json
 {
